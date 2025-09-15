@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/lib/jquery-2.1.4.min.js"></script>
+
+    <style>
+        .textoVerde{
+
+            color:green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<script>
+    // Como el script esta antes del Body, no se aplica, pues aún no exite el body desde donde selecciona elementos
+    // $('ul').addClass('textoVerde');
+
+    // Con el método ready, se espera hasta que le documento este libros para aplicar los métodos dentro de la función
+   // $(document).ready(function(){
+        //$('ul').addClass('textoVerde');
+   // });
+
+    // seleccionamos el primer hijo y aplicamos la clase textoVerde
+    // las function tmb esperan a que toda la página cargue
+    $(function(){
+        $('li:first-child').addClass('textoVerde');
+    });
+</script>
+
+<body>
+    <ul>
+        <li>hola 1</li>
+        <li>hola 2</li>
+        <li>hola 3</li>
+    </ul>
+    <ul>
+        <li>Negrita</li>
+        <li>Negrita</li>
+        <li>Negrita</li>
+    </ul>
+</body>
+</html>

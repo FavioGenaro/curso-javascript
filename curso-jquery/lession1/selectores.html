@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selección de Elementos en jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <h2>Mi Página con jQuery</h2>
+
+    <!-- Ejemplo de selección por etiqueta -->
+    <p>Este es un párrafo.</p>
+
+    <!-- Ejemplo de selección por clase -->
+    <p class="destacado">Este párrafo tiene una clase.</p>
+
+    <!-- Ejemplo de selección por ID -->
+    <p id="parrafo-id">Este párrafo tiene un ID.</p>
+
+    <script>
+        // Seleccionamos las etiquetas p y le agregamos una propiedad css
+        $("p").css("color","blue");
+        // seleccionamos clases
+        $(".destacado").css("font-weight","bold");
+        // Seleccionamos id
+        $("#parrafo-id").css("text-decoration","underline");
+    
+    </script>
+</body>
+
+</html>

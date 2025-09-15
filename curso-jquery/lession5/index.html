@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 02 - Selectores y Encadenamiento</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+	<!-- Estilo para esta pagina -->
+	<style>
+		img{
+			width: 200px;
+			height: 200px;
+		}
+		hr{
+			margin-bottom: 60px;
+		}
+		.morado{
+			color: blueviolet;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+		<h1>Selectores y Encadenamiento</h1>
+		<hr>
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="img/nophoto.jpg" class="img-circle">
+			</div>
+
+			<div class="col-sm-5">
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam aspernatur ab commodi tenetur, quisquam.
+				</p>
+			</div>
+
+			<div class="col-sm-3">
+				<ul>
+					<li>Matemática</li>
+					<li>Programación</li>
+					<li>Análisis</li>
+					<li>Física</li>
+					<li>Geografía</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('img')
+			.attr("src","img/profesor.jpg")
+			.removeClass("img-circle")
+			.addClass('img-thumbnail');
+
+			// seleccionamos la etiqueta con clase col-sm-5")
+			$(".col-sm-5")
+				.find("p") // dentro debe estar la etiqueta p
+				.html("saludos soy un profesor de udemy."); // reemplazamos el texto dentro del p.
+
+			$("ul li") // seleccionamos los li
+				.eq(0).addClass("morado");  // seleccionamos el primer hijo y le añadimos la clase morado.
+	</script>
+</body>
+</html>

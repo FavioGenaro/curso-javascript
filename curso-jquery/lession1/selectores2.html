@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Más Ejemplos de Selección en jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .resaltado {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>Mi Página con jQuery</h2>
+    <!-- Ejemplo de selección por atributo -->
+    <input type="text" value="Input de Texto" id="miInput">
+    <!-- Ejemplo de selección por posición -->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+    </ul>
+    <script>
+        // seleccionamos por el atributo value del input
+        $("[value='Input de Texto']").css("border","2px solid red");
+        // seleccionamos el segundo li, este conteo inicia con el 0 como 1er elemento y 1 seria el 2do
+        $("ul li:eq(1)").addClass("resaltado");
+        // li pares
+        $("ul li:even").css("color","green");
+        // li impares
+        $("ul li:odd").css("color", "blue");
+    </script>
+</body>
+</html>
